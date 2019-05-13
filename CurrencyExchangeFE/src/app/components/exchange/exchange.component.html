@@ -1,0 +1,9 @@
+<div>
+  <div class="container">
+    <input class="form-control input-fixed-width" [(ngModel)]="sourceMoney.amount" placeholder="0.0" appInputCurrency [currency]="sourceMoney.currency">
+    <input class="form-control input-fixed-width" value="{{targetMoney.amount | inputcurrencyformat: targetMoney.currency}}" readonly>
+  </div>
+  <div class="col-md-12 text-center">
+    <button class="btn btn-primary" (click)="calculate()">CALCULATE</button>
+  </div>
+</div>
